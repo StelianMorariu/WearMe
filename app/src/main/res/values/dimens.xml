@@ -9,4 +9,6 @@
     <dimen name="expanded_toolbar_title_margin_start">64dp</dimen>
 
     <dimen name="nav_header_text_margin_left">16dp</dimen>
+    <dimen name="default_padding">8dip</dimen>
+    <dimen name="splash_btn_text_size">18sp</dimen>
 </resources>

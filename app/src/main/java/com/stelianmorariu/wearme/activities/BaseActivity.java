@@ -1,32 +1,44 @@
-package com.stelianmorariu.wearme;
+package com.stelianmorariu.wearme.activities;
 
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
 
-public class BaseActivity extends AppCompatActivity {
+import com.stelianmorariu.wearme.R;
 
-    Toolbar toolbar;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
-    DrawerLayout drawerLayout;
-    ActionBarDrawerToggle drawerToggle;
+public abstract class BaseActivity extends AppCompatActivity {
+
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
+
+    @Bind(R.id.drawerLayout)
+    DrawerLayout mDrawerLayout;
+
+    @Bind(R.id.rootLayout)
+    FrameLayout mContentLayout;
+
+    ActionBarDrawerToggle mDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
+        ButterKnife.bind(this);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(mToolbar);
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        drawerToggle = new ActionBarDrawerToggle(BaseActivity.this, drawerLayout, R.string.hello_world, R.string.hello_world);
-        drawerLayout.setDrawerListener(drawerToggle);
+        mDrawerToggle = new ActionBarDrawerToggle(BaseActivity.this, mDrawerLayout, R.string.hello_world, R.string.hello_world);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -35,13 +47,13 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        drawerToggle.syncState();
+        mDrawerToggle.syncState();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        drawerToggle.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
     @Override
@@ -53,7 +65,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (drawerToggle.onOptionsItemSelected(item))
+        if (mDrawerToggle.onOptionsItemSelected(item))
             return true;
 
         // Handle action bar item clicks here. The action bar will
