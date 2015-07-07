@@ -20,5 +20,58 @@
         android:textColor="@color/icons"
         android:textSize="@dimen/splash_btn_text_size" />
 
+    <Button
+        android:id="@+id/btnActionButtonNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:layout_below="@id/btnSimpleNotification"
+        android:layout_centerHorizontal="true"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/action_action_button_notification"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:textSize="@dimen/splash_btn_text_size" />
+
+    <Button
+        android:id="@+id/btnWearableActionsNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:layout_below="@id/btnActionButtonNotification"
+        android:layout_centerHorizontal="true"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/action_wearable_action_notification"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:textSize="@dimen/splash_btn_text_size" />
+
+    <Button
+        android:id="@+id/btnBigViewNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:layout_below="@id/btnWearableActionsNotification"
+        android:layout_centerHorizontal="true"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/action_big_view_notification"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:textSize="@dimen/splash_btn_text_size" />
+
+    <Button
+        android:id="@+id/btnWearableFeatureNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:layout_below="@id/btnBigViewNotification"
+        android:layout_centerHorizontal="true"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/action_wearable_feature_notification"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:textSize="@dimen/splash_btn_text_size" />
+
+
 
 </RelativeLayout>

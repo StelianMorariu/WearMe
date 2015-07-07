@@ -4,4 +4,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="action_simple_notification">Simple Notification</string>
+    <string name="title_activity_notification_interaction">NotificationInteractionActivity</string>
+    <string name="action_action_button_notification">Action Button notifications</string>
+    <string name="action_wearable_action_notification">Wearable Actions notifications</string>
+    <string name="action_wearable_feature_notification">Wearable Feature notifications</string>
+    <string name="action_big_view_notification">Big View notifications</string>
 </resources>
