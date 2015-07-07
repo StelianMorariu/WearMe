@@ -29,6 +29,11 @@ public class WearNotificationsActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
+    @Override
+    protected int getNavigationItemIndex() {
+        return 0;
+    }
+
     @Nullable
     @OnClick(R.id.btnSimpleNotification)
     void triggerSimpleNotification(View v) {

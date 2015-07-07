@@ -1,14 +1,15 @@
 package com.stelianmorariu.wearme.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.FrameLayout;
 
 import com.stelianmorariu.wearme.R;
@@ -16,13 +17,16 @@ import com.stelianmorariu.wearme.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
     @Bind(R.id.drawerLayout)
     DrawerLayout mDrawerLayout;
+
+    @Bind(R.id.navigation)
+    NavigationView mNavigationView;
 
     @Bind(R.id.rootLayout)
     FrameLayout mContentLayout;
@@ -42,7 +46,15 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mNavigationView.setNavigationItemSelectedListener(this);
+        mNavigationView.setItemTextColor(getResources().getColorStateList(R.color.nav_color_state));
+        mNavigationView.setItemIconTintList(getResources().getColorStateList(R.color.nav_color_state));
+        mNavigationView.getMenu().getItem(getNavigationItemIndex()).setChecked(true);
+
     }
+
+    protected abstract int getNavigationItemIndex();
 
     @Override
     public void onPostCreate(Bundle savedInstanceState) {
@@ -79,5 +91,16 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.nav_simple_notification:
+                startActivity(new Intent(BaseActivity.this, WearNotificationsActivity.class));
+                break;
+        }
+
+        return true;
     }
 }
