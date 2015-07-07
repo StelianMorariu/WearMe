@@ -1,0 +1,33 @@
+<!--
+  ~ /*
+  ~  *
+  ~  * Copyright (c) 2015 Ropardo
+  ~  *
+  ~  * The above copyright notice and this permission notice shall be included in all
+  ~  * copies or substantial portions of the Software.
+  ~  *
+  ~  */
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/primary</item>
+
+        <item name="colorButtonNormal">@color/accent</item>
+
+        <item name="refreshColor">@color/accent</item>
+        <item name="fabNormalColor">@color/accent</item>
+        <item name="fabPressedColor">@color/primary_light</item>
+
+        <item name="patternViewStyle">@style/BeaconPattern</item>
+    </style>
+
+</resources>
