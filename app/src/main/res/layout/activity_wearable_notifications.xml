@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2015. Stelian Morariu
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnSimpleNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/action_simple_notification"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:textSize="@dimen/splash_btn_text_size" />
+
+
+</RelativeLayout>
