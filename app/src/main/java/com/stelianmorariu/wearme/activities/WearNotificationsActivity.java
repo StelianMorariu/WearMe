@@ -60,7 +60,8 @@ public class WearNotificationsActivity extends BaseActivity {
                         .setSmallIcon(R.drawable.abc_ic_menu_copy_mtrl_am_alpha)
                         .setContentTitle("test ")
                         .setContentText("testing bitch")
-                        .setContentIntent(viewPendingIntent);
+                        .setContentIntent(viewPendingIntent)
+                        .setDefaults(NotificationCompat.DEFAULT_ALL);
 
         mNotificationManager.notify(notificationId, notificationBuilder.build());
 
