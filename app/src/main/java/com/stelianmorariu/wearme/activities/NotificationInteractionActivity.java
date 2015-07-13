@@ -5,24 +5,30 @@
 
 package com.stelianmorariu.wearme.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import com.stelianmorariu.wearme.R;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.NotificationManagerCompat;
 
 public class NotificationInteractionActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notification_interaction);
+
+        final NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+        final int intExtra = getIntent().getIntExtra(WearNotificationsActivity.NOTIFICATION_ID, 0);
+        managerCompat.cancel(intExtra);
+
+        final String extra = getIntent().getStringExtra(WearNotificationsActivity.NOTIFICATION_TYPE);
+        if (extra != null) {
+            Snackbar.make(mContentLayout, extra, Snackbar.LENGTH_LONG)
+                    .show();
+        }
     }
 
     @Override
     protected int getNavigationItemIndex() {
-        return -1;
+        return 0;
     }
 
 
