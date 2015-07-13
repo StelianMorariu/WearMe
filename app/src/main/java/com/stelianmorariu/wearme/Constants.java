@@ -14,4 +14,7 @@ public class Constants {
     public static final String NOTIFICATION_WEARABLE_ACTION = "com.stelianmorariu.wearme.NOTIFICATION_WEARABLE_ACTION";
     public static final String NOTIFICATION_BIG_VIEW = "com.stelianmorariu.wearme.NOTIFICATION_BIG_VIEW";
     public static final String NOTIFICATION_WEARABLE_FEATURE = "com.stelianmorariu.wearme.NOTIFICATION_WEARABLE_FEATURE";
+    public static final String NOTIFICATION_VOICE_INTERACTION = "com.stelianmorariu.wearme.NOTIFICATION_VOICE_INTERACTION";
+    public static final String NOTIFICATION_VOICE_TEXT_INTERACTION = "com.stelianmorariu.wearme.NOTIFICATION_VOICE_TEXT_INTERACTION";
+
 }

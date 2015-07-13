@@ -9,4 +9,16 @@
     <string name="action_wearable_action_notification">Wearable Actions notifications</string>
     <string name="action_wearable_feature_notification">Wearable Feature notifications</string>
     <string name="action_big_view_notification">Big View notifications</string>
+    <string name="action_voice_interaction_notification">Voice interaction Notification</string>
+    <string name="title_activity_simple_notifications">Simple notifications</string>
+    <string name="title_activity_voice_notifications">Voice notifications</string>
+    <string name="action_voice_only_notification">Voice only interaction</string>
+    <string name="action_voice_text_notification">Voice and Text interaction</string>
+
+
+    <string-array name="reply_choices">
+        <item>pewny god</item>
+        <item>Whomever shall be worthy</item>
+        <item>Shall posses the power of Thor</item>
+    </string-array>
 </resources>

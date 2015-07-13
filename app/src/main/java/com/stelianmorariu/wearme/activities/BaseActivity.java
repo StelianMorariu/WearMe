@@ -97,7 +97,10 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_simple_notification:
-                startActivity(new Intent(BaseActivity.this, WearNotificationsActivity.class));
+                startActivity(new Intent(BaseActivity.this, SimpleNotificationsActivity.class));
+                break;
+            case R.id.nav_voice_notification:
+                startActivity(new Intent(BaseActivity.this, VoiceNotificationsActivity.class));
                 break;
         }
 

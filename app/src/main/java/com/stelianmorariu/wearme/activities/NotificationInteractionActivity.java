@@ -16,10 +16,10 @@ public class NotificationInteractionActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         final NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
-        final int intExtra = getIntent().getIntExtra(WearNotificationsActivity.NOTIFICATION_ID, 0);
+        final int intExtra = getIntent().getIntExtra(SimpleNotificationsActivity.NOTIFICATION_ID, 0);
         managerCompat.cancel(intExtra);
 
-        final String extra = getIntent().getStringExtra(WearNotificationsActivity.NOTIFICATION_TYPE);
+        final String extra = getIntent().getStringExtra(SimpleNotificationsActivity.NOTIFICATION_TYPE);
         if (extra != null) {
             Snackbar.make(mContentLayout, extra, Snackbar.LENGTH_LONG)
                     .show();

@@ -27,7 +27,7 @@ import butterknife.OnClick;
 /**
  * Created by Stelian Morariu on 7/7/2015.
  */
-public class WearNotificationsActivity extends BaseActivity {
+public class SimpleNotificationsActivity extends BaseActivity {
 
     public static final String NOTIFICATION_TYPE = "com.stelianmorariu.wearme.NOTIFICATION_TYPE";
     public static final String NOTIFICATION_ID = "com.stelianmorariu.wearme.NOTIFICATION_ID";
@@ -38,15 +38,15 @@ public class WearNotificationsActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mContentLayout.addView(View.inflate(this, R.layout.activity_wearable_notifications, null));
+        mContentLayout.addView(View.inflate(this, R.layout.activity_simple_notifications, null));
         ButterKnife.bind(this);
 
         mNotificationManager = NotificationManagerCompat.from(this);
 
-        final int intExtra = getIntent().getIntExtra(WearNotificationsActivity.NOTIFICATION_ID, 0);
+        final int intExtra = getIntent().getIntExtra(SimpleNotificationsActivity.NOTIFICATION_ID, 0);
         mNotificationManager.cancel(intExtra);
 
-        final String extra = getIntent().getStringExtra(WearNotificationsActivity.NOTIFICATION_TYPE);
+        final String extra = getIntent().getStringExtra(SimpleNotificationsActivity.NOTIFICATION_TYPE);
         if (extra != null) {
             Snackbar.make(mContentLayout, extra, Snackbar.LENGTH_LONG)
                     .show();
@@ -65,7 +65,7 @@ public class WearNotificationsActivity extends BaseActivity {
         v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
 
         // Build intent for notification content
-        Intent viewIntent = new Intent(this, WearNotificationsActivity.class);
+        Intent viewIntent = new Intent(this, SimpleNotificationsActivity.class);
         viewIntent.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_SIMPLE);
         viewIntent.putExtra(NOTIFICATION_ID, notificationId);
 
@@ -90,12 +90,12 @@ public class WearNotificationsActivity extends BaseActivity {
         v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
 
         // Build intent for notification content
-        Intent viewIntent = new Intent(this, WearNotificationsActivity.class);
+        Intent viewIntent = new Intent(this, SimpleNotificationsActivity.class);
         viewIntent.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_SIMPLE);
         viewIntent.putExtra(NOTIFICATION_ID, notificationId);
 
         // Build intent for notification content
-        Intent actionIntent = new Intent(this, WearNotificationsActivity.class);
+        Intent actionIntent = new Intent(this, SimpleNotificationsActivity.class);
         actionIntent.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_ACTION_BUTTON);
         actionIntent.putExtra(NOTIFICATION_ID, notificationId);
 
@@ -122,17 +122,17 @@ public class WearNotificationsActivity extends BaseActivity {
         v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
 
         // Build intent for notification content
-        Intent viewIntent = new Intent(this, WearNotificationsActivity.class);
+        Intent viewIntent = new Intent(this, SimpleNotificationsActivity.class);
         viewIntent.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_SIMPLE);
         viewIntent.putExtra(NOTIFICATION_ID, notificationId);
 
         // Build intent for notification content
-        Intent actionIntent = new Intent(this, WearNotificationsActivity.class);
+        Intent actionIntent = new Intent(this, SimpleNotificationsActivity.class);
         actionIntent.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_ACTION_BUTTON);
         actionIntent.putExtra(NOTIFICATION_ID, notificationId);
 
         // Build intent for notification content
-        Intent wearableAction = new Intent(this, WearNotificationsActivity.class);
+        Intent wearableAction = new Intent(this, SimpleNotificationsActivity.class);
         wearableAction.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_WEARABLE_ACTION);
         wearableAction.putExtra(NOTIFICATION_ID, notificationId);
 
@@ -167,7 +167,7 @@ public class WearNotificationsActivity extends BaseActivity {
         bigStyle.bigText("THis is just a bunch of text. I only want to see how long text is displayed on a wearable device.");
 
         // Build intent for notification content
-        Intent viewIntent = new Intent(this, WearNotificationsActivity.class);
+        Intent viewIntent = new Intent(this, SimpleNotificationsActivity.class);
         viewIntent.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_BIG_VIEW);
         viewIntent.putExtra(NOTIFICATION_ID, notificationId);
 
@@ -192,7 +192,7 @@ public class WearNotificationsActivity extends BaseActivity {
         v.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
 
         // Build intent for notification content
-        Intent viewIntent = new Intent(this, WearNotificationsActivity.class);
+        Intent viewIntent = new Intent(this, SimpleNotificationsActivity.class);
         viewIntent.putExtra(NOTIFICATION_TYPE, Constants.NOTIFICATION_WEARABLE_FEATURE);
         viewIntent.putExtra(NOTIFICATION_ID, notificationId);
 
