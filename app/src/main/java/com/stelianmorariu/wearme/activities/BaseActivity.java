@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,9 @@ import butterknife.ButterKnife;
 
 public abstract class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static final String NOTIFICATION_TYPE = "com.stelianmorariu.wearme.NOTIFICATION_TYPE";
+    public static final String NOTIFICATION_ID = "com.stelianmorariu.wearme.NOTIFICATION_ID";
+
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
 
@@ -33,6 +37,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
 
     ActionBarDrawerToggle mDrawerToggle;
 
+    protected NotificationManagerCompat mNotificationManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,6 +106,12 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
                 break;
             case R.id.nav_voice_notification:
                 startActivity(new Intent(BaseActivity.this, VoiceNotificationsActivity.class));
+                break;
+            case R.id.nav_paged_notifications:
+                startActivity(new Intent(BaseActivity.this, PagedNotificationsActivity.class));
+                break;
+            case R.id.nav_stacked_notifications:
+                startActivity(new Intent(BaseActivity.this, StackedNotificationsActivity.class));
                 break;
         }
 

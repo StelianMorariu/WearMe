@@ -14,6 +14,13 @@
     <string name="title_activity_voice_notifications">Voice notifications</string>
     <string name="action_voice_only_notification">Voice only interaction</string>
     <string name="action_voice_text_notification">Voice and Text interaction</string>
+    <string name="action_paged_notifications">Paged Notifications</string>
+    <string name="action_stacked_notifications">Stacked Notifications</string>
+    <string name="lbl_drawer_notifications">Notifications</string>
+    <string name="title_activity_paged_notifications">Paged Notifications</string>
+    <string name="title_activity_stacked_notifications">Stacked Notifications</string>
+    <string name="hont_stacked_notifications">Clicking multiple times on the button bellow will generate stacked notifications</string>
+    <string name="sample_notification_message">Notification created at %s</string>
 
 
     <string-array name="reply_choices">

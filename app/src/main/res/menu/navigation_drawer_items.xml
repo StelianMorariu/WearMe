@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_simple_notification"
-            android:title="@string/action_simple_notification" />
-        <item
-            android:id="@+id/nav_voice_notification"
-            android:title="@string/action_voice_interaction_notification" />
+        <!--<item-->
+            <!--android:id="@+id/navigation_subheader"-->
+            <!--android:title="@string/lbl_drawer_notifications">-->
+            <!--<menu>-->
+                <item
+                    android:id="@+id/nav_simple_notification"
+                    android:title="@string/action_simple_notification" />
+                <item
+                    android:id="@+id/nav_voice_notification"
+                    android:title="@string/action_voice_interaction_notification" />
 
-        <item
-            android:id="@+id/navItem3"
-            android:title="About" />
+                <item
+                    android:id="@+id/nav_paged_notifications"
+                    android:title="@string/action_paged_notifications" />
 
-        <item
-            android:id="@+id/navItem4"
-            android:title="Contact" />
+                <item
+                    android:id="@+id/nav_stacked_notifications"
+                    android:title="@string/action_stacked_notifications" />
+            <!--</menu>-->
+        <!--</item>-->
     </group>
 </menu>

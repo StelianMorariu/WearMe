@@ -16,5 +16,7 @@ public class Constants {
     public static final String NOTIFICATION_WEARABLE_FEATURE = "com.stelianmorariu.wearme.NOTIFICATION_WEARABLE_FEATURE";
     public static final String NOTIFICATION_VOICE_INTERACTION = "com.stelianmorariu.wearme.NOTIFICATION_VOICE_INTERACTION";
     public static final String NOTIFICATION_VOICE_TEXT_INTERACTION = "com.stelianmorariu.wearme.NOTIFICATION_VOICE_TEXT_INTERACTION";
+    public static final String NOTIFICATION_PAGED = "com.stelianmorariu.wearme.NOTIFICATION_PAGED";
+    public static final String NOTIFICATION_STACKED = "com.stelianmorariu.wearme.NOTIFICATION_STACKED";
 
 }

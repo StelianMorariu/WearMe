@@ -29,11 +29,6 @@ import butterknife.OnClick;
  */
 public class SimpleNotificationsActivity extends BaseActivity {
 
-    public static final String NOTIFICATION_TYPE = "com.stelianmorariu.wearme.NOTIFICATION_TYPE";
-    public static final String NOTIFICATION_ID = "com.stelianmorariu.wearme.NOTIFICATION_ID";
-
-    private NotificationManagerCompat mNotificationManager;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

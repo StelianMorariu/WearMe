@@ -27,11 +27,9 @@ import butterknife.OnClick;
  */
 public class VoiceNotificationsActivity extends BaseActivity {
 
-    public static final String NOTIFICATION_TYPE = "com.stelianmorariu.wearme.NOTIFICATION_TYPE";
-    public static final String NOTIFICATION_ID = "com.stelianmorariu.wearme.NOTIFICATION_ID";
     public static final String EXTRA_VOICE_REPLY = "com.stelianmorariu.wearme.EXTRA_VOICE_REPLY";
 
-    private NotificationManagerCompat mNotificationManager;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
